@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPG Application</title>
     <script>
-        var miles = prompt
+        var miles = prompt("Enter miles driven");
+        miles = parseFloat(miles);
+        var gallons = prompt("Enter gallons of gas used");
+        gallons = parseFloat(gallons);
+        var mpg = miles/gallons;
+        mpg = parseInt(mpg);
+        alert("Miles per gallon = " + mpg);
     </script>
 </head>
 <body>

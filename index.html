@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPG Application</title>
     <script>
-        var miles = prompt("Enter miles driven");
-        miles = parseFloat(miles);
-        var gallons = prompt("Enter gallons of gas used");
-        gallons = parseFloat(gallons);
-        var mpg = miles/gallons;
-        mpg = parseInt(mpg);
-        document.write(
-            "<h1>Calculate Miles Per Gallon</h1>" + "<br>" +
-            "Miles driven = " + miles + "<br>" +
-            "Gallons used = " + gallons + "<br>" + "<br>" +
-            "Miles per gallon = " + mpg
-            );
+        var repeat = "y";
+        do {
+            var miles = prompt("Enter miles driven");
+            miles = parseFloat(miles);
+            var gallons = prompt("Enter gallons of gas used");
+            gallons = parseFloat(gallons);
+            if (!isNaN(miles) || miles > 0 && !isNaN(gallons) && gallons > 0) {
+                var mpg = miles / gallons;
+                mpg = parseInt(mpg);
+                document.write(
+                    "<h1>Calculate Miles Per Gallon</h1>" + "<br>" +
+                    "Miles driven = " + miles + "<br>" +
+                    "Gallons used = " + gallons + "<br>" + "<br>" +
+                    "Miles per gallon = " + mpg
+                );
+            }
+            else {
+                alert("One of the entries is invalid.")
+            }
+            repeat = prompt("Repeat calculation?", "y or n");
+
+        }
+        while (repeat == "y");
+
+
+
     </script>
 </head>
+
 <body>
-   <p>Thanks for using the MPG Application.</p>
+    <p>Thanks for using the MPG Application.</p>
 </body>
+
 </html>

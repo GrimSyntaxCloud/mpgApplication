@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border: 5px solid rgb(59, 57, 57);
+    margin: 0 auto;
+    width: 500px;
+}
+
+
+main {
+    padding: 0 2em 1em;
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+    margin: 15px;
+    
+}
+
+label {
+    float:left;
+    text-align: right;
+    width: 14em;
+    padding-bottom: .5em;
+}
+
+input {
+    margin-right: 1em;
+    margin-bottom: .5em;
+}
+
+#mpg {
+    background-color: rgb(238, 238, 238)
+}

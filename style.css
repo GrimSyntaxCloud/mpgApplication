@@ -39,3 +39,7 @@ input {
 #mpg {
     background-color: rgb(238, 238, 238)
 }
+
+.error {
+    color:red;
+}

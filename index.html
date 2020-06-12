@@ -45,10 +45,18 @@
             }
         };
 
+        var clearEntries = function() {
+            $("miles").value = "";
+            $("gallons").value = "";
+            $("mpg").value = "";
+            $("miles_error").firstChild.nodeValue = "";
+            $("gallons_error").firstChild.nodeValue = "";
+        }
 
         window.onload = function () {
             $("calculate").onclick = processEntries;
             $("miles").focus();
+            $("reset").onclick = clearEntries;
         }
 
 
@@ -72,6 +80,9 @@
         <br>
         <label for="calculate">&nbsp;</label>
         <input type="button" id="calculate" value="Calculate MPG">
+        <br>
+        <label for="clear">&nbsp;</label>
+        <input type="button" id="reset" value="Clear entries">
     </main>
 
 </body>

@@ -34,18 +34,18 @@
             if (isNaN(gallons)) {
                 $("gallons_error").firstChild.nodeValue = " Must be valid number."
                 isValid = false;
-            } else if(gallons <= 0) {
+            } else if (gallons <= 0) {
                 $("gallons_error").firstChild.nodeValue = " Must be greater than 0."
                 isValid = false;
             } else {
                 $("gallons_error").firstChild.nodeValue = "";
             }
-            if(isValid) {
+            if (isValid) {
                 $("mpg").value = calculateMPG(miles, gallons);
             }
         };
 
-        var clearEntries = function() {
+        var clearEntries = function () {
             $("miles").value = "";
             $("gallons").value = "";
             $("mpg").value = "";

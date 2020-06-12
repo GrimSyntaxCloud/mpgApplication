@@ -18,19 +18,35 @@
             return mpg;
         };
 
-        var processEntries = function() {
+        var processEntries = function () {
             var miles = parseFloat($("miles").value);
             var gallons = parseFloat($("gallons").value);
-            if(isNaN(miles) || isNaN(gallons)) {
-                alert("Must use numbers");
+            var isValid = true;
+            if (isNaN(miles)) {
+                $("miles_error").firstChild.nodeValue = " Must be valid number."
+                isValid = false;
+            } else if (miles <= 0) {
+                $("miles_error").firstChild.nodeValue = " Must be greater than 0."
+                isValid = false;
+            } else {
+                $("miles_error").firstChild.nodeValue = "";
             }
-            else {
-                $("mpg").value = calculateMPG(miles,gallons);
+            if (isNaN(gallons)) {
+                $("gallons_error").firstChild.nodeValue = " Must be valid number."
+                isValid = false;
+            } else if(gallons <= 0) {
+                $("gallons_error").firstChild.nodeValue = " Must be greater than 0."
+                isValid = false;
+            } else {
+                $("gallons_error").firstChild.nodeValue = "";
+            }
+            if(isValid) {
+                $("mpg").value = calculateMPG(miles, gallons);
             }
         };
 
 
-        window.onload = function() {
+        window.onload = function () {
             $("calculate").onclick = processEntries;
             $("miles").focus();
         }

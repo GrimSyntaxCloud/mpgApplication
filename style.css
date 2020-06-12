@@ -14,8 +14,8 @@ body {
 
 
 main {
-    padding: 0 2em 1em;
-    text-align: center;
+    padding: 0 1em 1em;
+
 }
 
 h1 {
@@ -25,14 +25,17 @@ h1 {
 }
 
 label {
-    float:left;
+    float: left;
+    clear: left;
     text-align: right;
-    width: 14em;
+    width: 10em;
     padding-bottom: .5em;
 }
 
 input {
+    width: 10em;
     margin-right: 1em;
+    margin-left: 1em;
     margin-bottom: .5em;
 }
 
@@ -40,6 +43,6 @@ input {
     background-color: rgb(238, 238, 238)
 }
 
-.error {
+span {
     color:red;
 }
